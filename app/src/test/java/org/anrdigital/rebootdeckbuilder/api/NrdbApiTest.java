@@ -1,5 +1,6 @@
 package org.anrdigital.rebootdeckbuilder.api;
 
+import org.anrdigital.rebootdeckbuilder.R;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -17,7 +18,7 @@ public class NrdbApiTest {
     @Test
     public void PublicDeckListByDate_ReturnsData() throws IOException {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://netrunnerdb.com/api/2.0/")
+                .baseUrl("https://nrdb.reteki.fun/api/2.0/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

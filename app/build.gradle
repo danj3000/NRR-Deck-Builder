@@ -11,8 +11,8 @@ android {
         applicationId "org.anrdigital.rebootdeckbuilder"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 87
-        versionName "4.5.1"
+        versionCode 1
+        versionName "1.0.0"
 
         // Make sure this is consistent with the redirect URI used in res/raw/auth_config.json,
         // or specify additional redirect URIs in AndroidManifest.xml

@@ -34,12 +34,12 @@ object NrdbHelper {
     /* OAuth SignIn for Nrdb */
     fun doNrdbSignIn(context: Context) {
         val serviceConfiguration = AuthorizationServiceConfiguration(
-                Uri.parse("https://netrunnerdb.com/oauth/v2/auth") /* auth endpoint */,
-                Uri.parse("https://netrunnerdb.com/oauth/v2/token") /* token endpoint */
+                Uri.parse(context.getString(R.string.nrdb_auth_endpoint)) /* auth endpoint */,
+                Uri.parse(context.getString(R.string.nrdb_token_endpoint)) /* token endpoint */
         )
 
-        val clientId = "30_43lvcug21iqsgg44oss8go40ok04s80wcc8gocog8o0k88ck0c"
-        val redirectUri: Uri = Uri.parse("org.anrdigital.anrdeckbuilder://oauth2callback")
+        val clientId = context.getString(R.string.nrdb_oauth_clientid)
+        val redirectUri: Uri = Uri.parse(context.getString(R.string.oauth_callback_uri))
         val builder = AuthorizationRequest.Builder(
                 serviceConfiguration,
                 clientId,
