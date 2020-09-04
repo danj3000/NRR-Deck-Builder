@@ -14,8 +14,8 @@
     </style>
 
 	<style name="ActionBar" >
-		<item name="android:background" tools:ignore="NewApi">@color/half_black</item>
-		<item name="background">@color/half_black</item>
+		<item name="android:background" tools:ignore="NewApi">@color/rnt_green</item>
+		<item name="background">@color/rnt_green</item>
 		<item name="titleTextColor">@color/white</item>
 
 	</style>

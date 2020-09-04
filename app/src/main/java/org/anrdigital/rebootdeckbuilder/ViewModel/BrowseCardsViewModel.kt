@@ -6,6 +6,7 @@ import org.anrdigital.rebootdeckbuilder.game.CardList
 import org.anrdigital.rebootdeckbuilder.game.CardPool
 import org.anrdigital.rebootdeckbuilder.game.Format
 import org.anrdigital.rebootdeckbuilder.helper.ISettingsProvider
+import org.anrdigital.rebootdeckbuilder.helper.Sorter
 import java.util.*
 
 class BrowseCardsViewModel(private val cardRepo: CardRepository, settingsProvider: ISettingsProvider) : ViewModel() {
@@ -17,12 +18,14 @@ class BrowseCardsViewModel(private val cardRepo: CardRepository, settingsProvide
     var searchText = ""
     var browseFormat: Format
     fun init() {
-        cardList = mPool.getCards()
+        cardList = mPool.cards
+        Collections.sort(cardList, Sorter.CardSorterByName() )
     }
 
     fun doSearch(searchText: String?) {
         cardList!!.clear()
         cardList!!.addAll(cardRepo.searchCards(searchText, mPool))
+        Collections.sort(cardList, Sorter.CardSorterByName() )
     }
 
     fun updatePackFilter(packFilter: ArrayList<String>, format: Format) {
