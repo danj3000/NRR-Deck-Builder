@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/browseCardsFragment"
-        android:name="com.shuneault.netrunnerdeckbuilder.fragments.BrowseCardsFragment"
+        android:name="org.anrdigital.rebootdeckbuilder.fragments.BrowseCardsFragment"
         android:label="@string/title_browse_cards"
         tools:layout="@layout/fragment_browse_cards">
         <action
@@ -16,6 +16,6 @@
     </fragment>
     <fragment
         android:id="@+id/fullscreenCardsFragment2"
-        android:name="com.shuneault.netrunnerdeckbuilder.fragments.FullscreenCardsFragment"
+        android:name="org.anrdigital.rebootdeckbuilder.fragments.FullscreenCardsFragment"
         tools:layout="@layout/fragment_fullscreen_cards" />
 </navigation>

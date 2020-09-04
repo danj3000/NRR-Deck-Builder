@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cardGridFragment"
-        android:name="com.shuneault.netrunnerdeckbuilder.fragments.cardgrid.CardGridFragment"
+        android:name="org.anrdigital.rebootdeckbuilder.fragments.cardgrid.CardGridFragment"
         android:label="card_grid_fragment" >
         <action
             android:id="@+id/action_cardGridFragment_to_fullscreenCardsFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/fullscreenCardsFragment"
-        android:name="com.shuneault.netrunnerdeckbuilder.fragments.FullscreenCardsFragment"
+        android:name="org.anrdigital.rebootdeckbuilder.fragments.FullscreenCardsFragment"
         android:label="fragment_fullscreen_cards"
         tools:layout="@layout/fragment_fullscreen_cards" />
 </navigation>
